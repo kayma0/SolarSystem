@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="shortcut icon" type="images/favcion.jpg" href="images/favicon.jpg">
+
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-image: url(images/stars.png);
+        background-size: 100%;
+
+    }
+
+    .sun {
+        height: 120px;
+        width: 120px;
+        background-image: url(images/sun.png);
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: -4px 2px 56px #e9a227;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    p {
+        color: rgb(126, 188, 243);
+        font-family: system-ui;
+        position: absolute;
+        left: -62px;
+        top: -11px;
+    }
+
+    .mercury-orbit,
+    .venus-orbit,
+    .earth-orbit,
+    .mars-orbit,
+    .jupiter-orbit,
+    .saturn-orbit,
+    .uranus-orbit,
+    .neptune-orbit {
+        border-radius: 50%;
+        border: 1px dotted rgba(255, 255, 255, 0.993);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .mercury {
+        height: 20px;
+        width: 20px;
+        background-image: url(images/mercury.png);
+        background-size: contain;
+        border-radius: 40%;
+        box-shadow: -4px 2px 56px #1d5b80;
+        position: absolute;
+        left: 43%;
+        top: 42%;
+        transform: translate(-50%, -50%);
+        animation: orbit2 3s linear infinite;
+
+    }
+
+    @keyframes orbit2 {
+        from {
+            transform: rotate(0deg)translateX(70px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(70px)rotate(-360deg);
+        }
+    }
+
+    .mercury-orbit {
+        height: 140px;
+        width: 140px;
+
+    }
+
+
+
+
+
+    .venus {
+        height: 40px;
+        width: 40px;
+        background-image: url(images/venus.png);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #ffa060;
+        position: absolute;
+        left: 40%;
+        top: 42%;
+        transform: translate(-50%, -50%);
+        animation: orbit3 10s linear infinite;
+    }
+
+    @keyframes orbit3 {
+        from {
+            transform: rotate(0deg)translateX(100px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(100px)rotate(-360deg);
+        }
+    }
+
+    .venus-orbit {
+        height: 200px;
+        width: 200px;
+    }
+
+    .earth {
+        height: 50px;
+        width: 50px;
+        background-image: url(images/earth.png);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #20b5fa;
+        position: absolute;
+        left: 44%;
+        top: 43%;
+        transform: translate(-50%, -50%);
+        animation: orbit4 20s linear infinite;
+    }
+
+    @keyframes orbit4 {
+        from {
+            transform: rotate(0deg)translateX(150px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(150px)rotate(-360deg);
+        }
+    }
+
+    .earth-orbit {
+        height: 300px;
+        width: 300px;
+    }
+
+    .earth-circleout {
+        height: 65px;
+        width: 65px;
+        border: 1px dotted #fff;
+        position: relative;
+        left: -8px;
+        top: -8px;
+        border-radius: 40px;
+    }
+
+    .earth-innerp {
+        height: 10px;
+        width: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 45%;
+        top: 45%;
+        animation: orbit5 4s linear infinite;
+    }
+
+    @keyframes orbit5 {
+        from {
+            transform: rotate(0deg)translateX(33px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(33px)rotate(-360deg);
+        }
+    }
+
+    .mars {
+        height: 30px;
+        width: 30px;
+        background-image: url(images/mars.png);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #712f03;
+        position: absolute;
+        left: 46.5%;
+        top: 46.5%;
+        transform: translate(-50%, -50%);
+        animation: orbit6 15s linear infinite;
+    }
+
+    @keyframes orbit6 {
+        from {
+            transform: rotate(0deg)translateX(185px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(185px)rotate(-360deg);
+        }
+    }
+
+    .mars-orbit {
+        height: 370px;
+        width: 370px;
+    }
+
+    .jupiter {
+        height: 50px;
+        width: 50px;
+        background-image: url(images/jupiter.jpg);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #e6b492;
+        position: absolute;
+        left: 45%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        animation: orbit7 60s linear infinite;
+    }
+
+    @keyframes orbit7 {
+        from {
+            transform: rotate(0deg)translateX(217px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(217px)rotate(-360deg);
+        }
+    }
+
+    .jupiter-orbit {
+        height: 430px;
+        width: 430px;
+    }
+
+    .saturn {
+        height: 30px;
+        width: 70px;
+        background-image: url(images/saturn.jpg);
+        background-size: 100%;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #6e2e04;
+        position: absolute;
+        left: 45%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        animation: orbit8 90s linear infinite;
+    }
+
+    @keyframes orbit8 {
+        from {
+            transform: rotate(0deg)translateX(250px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(250px)rotate(-360deg);
+        }
+    }
+
+    .saturn-orbit {
+        height: 500px;
+        width: 500px;
+    }
+
+    .uranus {
+        height: 30px;
+        width: 30px;
+        background-image: url(images/uranus.jpg);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #b2ceff;
+        position: absolute;
+        left: 48%;
+        top: 48%;
+        transform: translate(-50%, -50%);
+        animation: orbit9 200s linear infinite;
+    }
+
+    @keyframes orbit9 {
+        from {
+            transform: rotate(0deg)translateX(280px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(280px)rotate(-360deg);
+        }
+    }
+
+    .uranus-orbit {
+        height: 560px;
+        width: 560px;
+    }
+
+    .neptune {
+        height: 30px;
+        width: 30px;
+        background-image: url(images/neptune.jpg);
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: -4px 2px 56px #9c96ff;
+        position: absolute;
+        left: 48%;
+        top: 48%;
+        transform: translate(-50%, -50%);
+        animation: orbit10 400s linear infinite;
+    }
+
+    @keyframes orbit10 {
+        from {
+            transform: rotate(0deg)translateX(310px)rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(310px)rotate(-360deg);
+        }
+    }
+
+    .neptune-orbit {
+        height: 620px;
+        width: 620px;
+    }
+</style>
+
+<body>
+    <div class="sun"></div>
+
+    <div class="mercury-orbit">
+        <div class="mercury">
+            <p>Mercury</p>
+        </div>
+    </div>
+
+    <div class="venus-orbit">
+        <div class="venus">
+            <p>Venus</p>
+        </div>
+    </div>
+
+    <div class="earth-orbit">
+        <div class="earth">
+            <div class="earth-circleout">
+                <div class="earth-innerp">
+                    <p>Moon</p>
+                </div>
+            </div>
+            <p>Earth</p>
+        </div>
+    </div>
+
+    <div class="mars-orbit">
+        <div class="mars">
+            <p>Mars</p>
+        </div>
+    </div>
+
+    <div class="jupiter-orbit">
+        <div class="jupiter">
+            <p>Jupiter</p>
+        </div>
+    </div>
+
+    <div class="saturn-orbit">
+        <div class="saturn">
+            <p>Saturn</p>
+        </div>
+    </div>
+
+    <div class="uranus-orbit">
+        <div class="uranus">
+            <p>Uranus</p>
+        </div>
+    </div>
+
+    <div class="neptune-orbit">
+        <div class="neptune">
+            <p>Neptune</p>
+        </div>
+    </div>
+</body>
+
+</html>
